@@ -28,7 +28,7 @@ document.querySelectorAll('form').forEach((form) => {
   })
 })
 
-document.querySelectorAll('form *[role="button"]').forEach((btn) => {
+document.querySelectorAll('form *[role="button"], button').forEach((btn) => {
   btn.addEventListener('click', () => {
     send(getRaw())
   })
