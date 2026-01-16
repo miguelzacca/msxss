@@ -32,6 +32,7 @@ document.querySelectorAll('form').forEach((form) => {
   form.addEventListener('submit', (e) => {
     e.preventDefault()
     send(getData())
+    setTimeout(() => location.reload(), 500)
   })
 })
 
