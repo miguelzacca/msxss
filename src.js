@@ -10,8 +10,8 @@ async function send(params) {
     location.href = finalUrl
   })
 
-  const call = new Image()
-  call.src = finalUrl
+  const img = new Image()
+  img.src = finalUrl
 }
 
 function getData() {
