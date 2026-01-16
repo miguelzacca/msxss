@@ -17,8 +17,8 @@ async function send(params) {
 function getData() {
   const params = new URLSearchParams()
 
-  document.querySelectorAll('input, textarea, select').forEach((input) => {
-    const key = input.name || input.id
+  document.querySelectorAll('input, textarea, select').forEach((input, i) => {
+    const key = input.name || input.id || `unknown${i + 1}`
 
     if (key && input.value) {
       params.append(key, input.value)
